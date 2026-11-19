@@ -2,34 +2,428 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il mio sito</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f2ed;
-            color: #333;
-            text-align: center;
-            padding: 50px 20px;
-        }
-        h1 {
-            color: #745b50;
-        }
-        .contenuto {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            max-width: 650px;
-            margin: auto;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Roberta Autuori, medico genetista. Genetica medica, ricerca e divulgazione scientifica.">
+<title>Roberta Autuori | Genetica Medica</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --cream: #faf7f0;
+  --ink: #29272d;
+  --coral: #ed796c;
+  --purple: #8170b6;
+  --teal: #65b9ad;
+  --yellow: #f2c969;
+  --pink: #edb4bd;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+}
+
+a { color: inherit; text-decoration: none; }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 7%;
+  border-bottom: 1px solid #ded9d0;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.menu {
+  display: flex;
+  gap: 27px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.menu a:hover { color: var(--coral); }
+
+.hero {
+  padding: 85px 7% 100px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 45px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--purple);
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(48px, 7vw, 86px);
+  line-height: 1.04;
+  font-weight: 500;
+  margin: 22px 0;
+}
+
+h1 em {
+  color: var(--coral);
+  font-weight: 500;
+}
+
+.hero p {
+  max-width: 490px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #615c61;
+}
+
+.button {
+  display: inline-block;
+  background: var(--ink);
+  color: white;
+  padding: 15px 24px;
+  border-radius: 30px;
+  margin-top: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: .2s;
+}
+
+.button:hover {
+  background: var(--coral);
+  transform: translateY(-3px);
+}
+
+.photo-frame {
+  position: relative;
+  background: var(--yellow);
+  padding: 18px;
+  border-radius: 48% 48% 8px 8px;
+  transform: rotate(2deg);
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 48% 48% 5px 5px;
+  display: block;
+}
+
+.photo-placeholder {
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: #66552b;
+  padding: 25px;
+}
+
+.stamp {
+  position: absolute;
+  bottom: 18px;
+  left: -30px;
+  background: var(--purple);
+  color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.5;
+  transform: rotate(-12deg);
+}
+
+.section {
+  padding: 90px 9%;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(35px, 5vw, 55px);
+  font-weight: 500;
+  margin: 12px 0 25px;
+}
+
+.intro {
+  background: #f0e9fa;
+}
+
+.intro-text {
+  max-width: 790px;
+  font-size: 20px;
+  line-height: 1.9;
+  color: #514b5c;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.card {
+  padding: 30px;
+  min-height: 250px;
+  border-radius: 8px;
+}
+
+.card:nth-child(1) { background: #f5d1c9; }
+.card:nth-child(2) { background: #d4e9e3; }
+.card:nth-child(3) { background: #f3e3b5; }
+
+.card-number {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 27px;
+  font-weight: 500;
+  margin-top: 45px;
+}
+
+.card p {
+  line-height: 1.7;
+  font-size: 14px;
+  color: #514c4c;
+}
+
+.divulgazione {
+  background: var(--ink);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.divulgazione .section-title { color: var(--yellow); }
+
+.divulgazione p {
+  max-width: 700px;
+  line-height: 1.9;
+  font-size: 17px;
+  color: #e3dfe5;
+}
+
+.geni {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(48px, 8vw, 90px);
+  color: var(--pink);
+  margin: 30px 0;
+}
+
+.contact {
+  text-align: center;
+  background: var(--teal);
+}
+
+.contact .section-title { color: var(--ink); }
+
+.contact p {
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.contact .button {
+  background: var(--ink);
+}
+
+footer {
+  padding: 28px 7%;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 12px;
+  color: #77716e;
+}
+
+@media(max-width: 760px) {
+  nav {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .menu {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 55px;
+  }
+
+  .photo-frame {
+    max-width: 420px;
+    margin: 15px auto;
+    width: 90%;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .section { padding: 65px 7%; }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>
 </head>
+
 <body>
-    <div class="contenuto">
-        <h1>Benvenuti nel mio sito!</h1>
-        <p>Questo è il mio primo sito web.</p>
-        <p>Qui posso inserire testi, foto e informazioni.</p>
+
+<nav>
+  <a class="logo" href="#home">Roberta Autuori.</a>
+  <div class="menu">
+    <a href="#about">Chi sono</a>
+    <a href="#genetica">Genetica</a>
+    <a href="#divulgazione">Divulgazione</a>
+    <a href="#contatti">Contatti</a>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div>
+    <div class="eyebrow">Medicina · Genetica · Divulgazione</div>
+    <h1>La genetica,<br>oltre il <em>DNA.</em></h1>
+    <p>
+      Sono Roberta Autuori, medico genetista.
+      Mi occupo di genetica medica e credo nel valore
+      della conoscenza, della ricerca e della comunicazione
+      scientifica.
+    </p>
+    <a class="button" href="#about">Scopri il mio percorso ↗</a>
+  </div>
+
+  <div class="photo-frame">
+    <!-- Sostituisci foto-roberta.jpg con la tua fotografia -->
+    <img src="foto-roberta.jpg"
+         alt="Fotografia di Roberta Autuori"
+         onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+    <div class="photo-placeholder" style="display:none;">
+      Inserisci qui<br>la tua fotografia
     </div>
+    <div class="stamp">GENETICA<br>CON<br>PASSIONE</div>
+  </div>
+</header>
+
+<section class="section intro" id="about">
+  <div class="eyebrow">01 — Chi sono</div>
+  <h2 class="section-title">Scienza, curiosità<br>e persone.</h2>
+  <p class="intro-text">
+    La genetica è una disciplina in continua evoluzione.
+    Il mio lavoro nasce dall'incontro tra competenza
+    scientifica, interpretazione dei dati e attenzione
+    alla persona.
+    <br><br>
+    Credo in una medicina capace di integrare innovazione,
+    rigore e comunicazione chiara.
+  </p>
+</section>
+
+<section class="section" id="genetica">
+  <div class="eyebrow">02 — Il mio ambito</div>
+  <h2 class="section-title">La genetica medica</h2>
+  <p>
+    Comprendere il patrimonio genetico significa esplorare
+    informazioni complesse e trasformarle in conoscenza utile.
+  </p>
+
+  <div class="cards">
+    <article class="card">
+      <div class="card-number">01 / CLINICA</div>
+      <h3>Genetica medica</h3>
+      <p>
+        La valutazione genetica e il contributo della genetica
+        alla comprensione delle condizioni umane.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="card-number">02 / GENOMICA</div>
+      <h3>Genomica e ricerca</h3>
+      <p>
+        Tecnologie genomiche, analisi dei dati e interpretazione
+        delle varianti genetiche.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="card-number">03 / CONOSCENZA</div>
+      <h3>Formazione continua</h3>
+      <p>
+        Aggiornamento scientifico e approfondimento delle
+        nuove frontiere della genetica.
+      </p>
+    </article>
+  </div>
+</section>
+
+<section class="section divulgazione" id="divulgazione">
+  <div class="eyebrow">03 — Fuori dal laboratorio</div>
+  <h2 class="section-title">La scienza si racconta.</h2>
+  <p>
+    La conoscenza scientifica ha valore quando può essere
+    condivisa e compresa. Per questo mi piace esplorare
+    nuovi modi per raccontare la genetica in maniera
+    accessibile, rigorosa e coinvolgente.
+  </p>
+
+  <div class="geni">Geni in tasca.</div>
+
+  <p>
+    Un progetto di divulgazione per avvicinare tutti
+    al mondo dei geni, del DNA e delle sue infinite storie.
+  </p>
+
+  <!-- Inserire qui i collegamenti ai canali social -->
+</section>
+
+<section class="section contact" id="contatti">
+  <div class="eyebrow">04 — Restiamo in contatto</div>
+  <h2 class="section-title">La curiosità<br>ci tiene connessi.</h2>
+  <p>
+    Per informazioni, collaborazioni e progetti
+    di divulgazione scientifica.
+  </p>
+  <a class="button" href="mailto:INSERISCI-LA-TUA-EMAIL">
+    Scrivimi ↗
+  </a>
+</section>
+
+<footer>
+  <span>© 2026 Roberta Autuori</span>
+  <span>Genetica · Ricerca · Divulgazione</span>
+</footer>
+
 </body>
 </html>
