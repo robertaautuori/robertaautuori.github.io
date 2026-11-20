@@ -400,7 +400,7 @@ footer a {
 .split {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: stretch;
   gap: 30px;
 }
 
@@ -409,14 +409,15 @@ footer a {
 }
 
 .bio-photo {
-  flex: 0 0 200px;
-  text-align: center;
+  flex: 0 0 260px;
+  display: flex;
+  align-items: stretch;
 }
 
 .bio-photo img {
   width: 100%;
-  max-width: 200px;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   border-radius: 20px;
 }
 
@@ -429,10 +430,13 @@ footer a {
 
   .bio-photo {
     flex: none;
+    justify-content: center;
   }
 
   .bio-photo img {
-    max-width: 430px;
+    width: 100%;
+    max-width: 260px;
+    height: auto;
   }
 }
 </style>
@@ -531,7 +535,7 @@ footer a {
 </section>
     
 
-<section id="contatti" class="brown">
+<section id="contatti" class="green">
   <div class="container">
     <div class="eyebrow">05 · Contatti</div>
     <h2>Restiamo in contatto.</h2>
@@ -663,7 +667,7 @@ footer a {
 </div>
 </section>
 
-<section id="news" class="green">
+<section id="news" class="brown">
 <div class="container">
   <div class="eyebrow">08 · Aggiornamenti</div>
   <h2>News</h2>
