@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -6,8 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Roberta Autuori | Genetica Medica</title>
 <meta name="description" content="Roberta Autuori, Medico Specialista in Genetica Medica. Informazione, consulenza genetica e divulgazione scientifica.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
 <style>
 :root {
   --ink: #30283b;
@@ -20,127 +23,310 @@
   --purple: #E8DDF2;
   --brown: #E8D8C8;
   --cream: #FFFAF5;
+  --button: #30283B;
 }
-* {box-sizing:border-box;scroll-behavior:smooth}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 body {
-  margin:0;
-  background:var(--cream);
-  color:var(--ink);
-  font-family:'DM Sans',sans-serif;
-  line-height:1.65;
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.65;
 }
+
 header {
-  background:rgba(255,250,245,.96);
-  position:sticky;top:0;z-index:10;
-  border-bottom:1px solid #eee4df;
+  background: rgba(255,250,245,.96);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #eee4df;
 }
+
 nav {
-  max-width:1150px;margin:auto;padding:14px 22px;
-  display:flex;justify-content:space-between;align-items:center;
-  gap:15px;flex-wrap:wrap;
+  max-width: 1150px;
+  margin: auto;
+  padding: 14px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
-.logo {font-weight:700;color:var(--purple);font-size:19px}
+
+.logo {
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 19px;
+}
+
 nav a {
-  text-decoration:none;color:var(--ink);
-  font-size:13px;font-weight:600;margin:4px 7px;
+  text-decoration: none;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+  margin: 4px 7px;
 }
-nav a:hover {color:var(--coral)}
-section {padding:75px 22px;scroll-margin-top:80px}
-.container {max-width:1050px;margin:auto}
-h1,h2,h3 {font-family:'Playfair Display',serif;line-height:1.2}
-h1 {font-size:clamp(38px,6vw,65px);margin:15px 0}
-h2 {font-size:clamp(30px,4vw,43px);margin:0 0 18px}
-h3 {font-size:23px}
-p {max-width:760px}
+
+nav a:hover {
+  color: #765C91;
+}
+
+section {
+  padding: 75px 22px;
+  scroll-margin-top: 80px;
+}
+
+.container {
+  max-width: 1050px;
+  margin: auto;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+h1 {
+  font-size: clamp(38px, 6vw, 65px);
+  margin: 15px 0;
+}
+
+h2 {
+  font-size: clamp(30px, 4vw, 43px);
+  margin: 0 0 18px;
+}
+
+h3 {
+  font-size: 23px;
+}
+
+p {
+  max-width: 760px;
+}
+
 .eyebrow {
-  text-transform:uppercase;letter-spacing:2px;
-  font-size:12px;font-weight:700;color:var(--purple)
-}
-.hero {background:var(--pink);padding:90px 22px}
-.hero-inner {
-  max-width:1050px;margin:auto;display:grid;
-  grid-template-columns:1.3fr .7fr;align-items:center;gap:40px
-}
-.hero p {font-size:18px}
-.hero img {
-  width:100%;max-width:320px;aspect-ratio:4/5;
-  object-fit:cover;border-radius:48% 48% 18px 18px;
-  box-shadow:14px 14px 0 var(--yellow)
-}
-.btn {
-  display:inline-block;background:var(--purple);color:white;
-  padding:12px 21px;border-radius:30px;text-decoration:none;
-  font-weight:600;margin:12px 8px 0 0
-}
-.btn.light {background:white;color:var(--purple)}
-.soft {background:var(--cream)}
-  .pink {
-  background: var(--pink);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #765C91;
 }
 
-.yellow {
-  background: var(--yellow);
-}
-
-.blue {
+/* INTRODUZIONE */
+.hero {
   background: var(--blue);
+  padding: 90px 22px;
 }
 
-.mint {
-  background: var(--mint);
+.hero-inner {
+  max-width: 1050px;
+  margin: auto;
+  text-align: center;
 }
 
-.green {
-  background: var(--green);
+.hero h2 {
+  color: #765C91;
+  font-size: 25px;
 }
 
-.coral {
-  background: var(--coral);
+.hero p {
+  font-size: 18px;
 }
 
-.purple {
-  background: var(--purple);
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
 }
 
-.brown {
-  background: var(--brown);
+/* BOTTONI */
+.btn {
+  display: inline-block;
+  background: var(--button);
+  color: white !important;
+  padding: 12px 21px;
+  border: 1px solid var(--button);
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  margin: 0;
+  transition: background .2s ease;
 }
- .grid {
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:18px;margin-top:30px
+
+.btn:hover {
+  background: #765C91;
+  border-color: #765C91;
+  color: white !important;
 }
+
+.btn.light {
+  background: var(--button);
+  color: white !important;
+  border-color: var(--button);
+}
+
+/* COLORI DELLE SEZIONI */
+#chi-sono {
+  background-color: var(--pink);
+}
+
+#visita {
+  background-color: var(--blue);
+}
+
+#prenotare {
+  background-color: var(--mint);
+}
+
+#tariffe {
+  background-color: var(--yellow);
+}
+
+#contatti {
+  background-color: var(--brown);
+}
+
+#social {
+  background-color: var(--coral);
+}
+
+#podcast {
+  background-color: var(--purple);
+}
+
+#news {
+  background-color: var(--green);
+}
+
+/* CLASSI COLORE RIUTILIZZABILI */
+.pink { background: var(--pink); }
+.yellow { background: var(--yellow); }
+.blue { background: var(--blue); }
+.mint { background: var(--mint); }
+.green { background: var(--green); }
+.coral { background: var(--coral); }
+.purple { background: var(--purple); }
+.brown { background: var(--brown); }
+
+.soft {
+  background: var(--cream);
+}
+
+/* GRIGLIE E SCHEDE */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 30px;
+}
+
 .card {
-  background:white;padding:24px;border-radius:18px;
-  box-shadow:0 5px 22px rgba(48,40,59,.06)
+  background: white;
+  color: var(--ink);
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: 0 5px 22px rgba(48,40,59,.06);
 }
-.card h3 {margin-top:0}
-.card p {font-size:15px}
-.card a {color:var(--purple);font-weight:700;text-decoration:none}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  font-size: 15px;
+}
+
+.card a {
+  color: #765C91;
+  font-weight: 700;
+  text-decoration: none;
+}
+
 .tag {
-  color:var(--purple);font-size:12px;
-  font-weight:700;text-transform:uppercase;letter-spacing:1px
+  color: #765C91;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
+
 .split {
-  display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-top: 30px;
 }
-.split .card {padding:30px}
+
+.split .card {
+  padding: 30px;
+}
+
 .social-links {
-  display:flex;gap:12px;flex-wrap:wrap;margin-top:22px
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 22px;
 }
+
 footer {
-  background:var(--ink);color:white;text-align:center;
-  padding:35px 20px;font-size:13px
+  background: var(--ink);
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+  font-size: 13px;
 }
-footer a {color:white}
+
+footer a {
+  color: white;
+}
+
+/* VERSIONE CELLULARE */
 @media(max-width:700px) {
-  .hero-inner,.split {grid-template-columns:1fr}
-  .hero img {max-width:240px;margin:auto}
-  nav {justify-content:center}
-  nav .links {text-align:center}
-  section {padding:55px 20px}
+  .hero {
+    padding: 65px 20px;
+  }
+
+  .hero-inner,
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 340px;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  nav .links {
+    text-align: center;
+  }
+
+  section {
+    padding: 55px 20px;
+  }
 }
 </style>
 </head>
+
 <body>
 
 <header>
@@ -161,21 +347,31 @@ footer a {color:white}
 <main>
 
 <section class="hero">
-<div class="hero-inner">
-  <div>
-  <h1>Roberta Autuori</h1>
-<h2 style="color:#765c91; font-size:25px;">
-Medico specialista in Genetica Medica -  Salerno
-</h2>
-    <a class="btn" href="#visita">Scopri cosa è la visita genetica</a>
-    <a class="btn light" href="#chi-sono">Conosciamoci</a>
-    <a class="btn" href="mailto:roberta.autuori@sangiovannieruggi.it?subject=Richiesta%20di%20informazioni">
-    Scrivimi
-  </a>
+  <div class="hero-inner">
+    <h1>Roberta Autuori</h1>
+
+    <h2>
+      Medico specialista in Genetica Medica - Salerno
+    </h2>
+
+    <div class="hero-buttons">
+      <a class="btn" href="#visita">
+        Scopri cos'è la visita genetica
+      </a>
+
+      <a class="btn" href="#chi-sono">
+        Conosciamoci
+      </a>
+
+      <a class="btn" href="mailto:roberta.autuori@sangiovannieruggi.it?subject=Richiesta%20di%20informazioni">
+        Scrivimi
+      </a>
     </div>
   </div>
- </div>
 </section>
+</main>
+</body>
+</html>
 
 <section id="chi-sono" class="pink">
   <div class="container">
