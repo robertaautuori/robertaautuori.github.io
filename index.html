@@ -145,20 +145,72 @@ Medico specialista in Genetica Medica -  Salerno
   </a>
     </div>
   </div>
-  <img src="foto-roberta.jpg" alt="Roberta Autuori">
-</div>
+ </div>
 </section>
 
 <section id="chi-sono" class="soft">
-<div class="container">
-  <div class="eyebrow">01 · Chi sono</div>
-  <h2>Piacere, sono Roberta Autuori.</h2>
-  <p>Sono un medico specialista in Genetica Medica e lavoro presso l'AOU Ruggi di Salerno. </p>
-   <p>Mi sono laureata al Campus Biomedico di Roma e specializzata in Genetica Medica presso il Policlinico Tor Vergata di Roma. </p>
-   <p>Mi occupo di genetica clinica e di interpretazione dei referti genetici, con l'obiettivo di integrare i risultati dei test con la storia personale e familiare di ciascuna persona.</p>
-  <p>Credo in una medicina attenta alla persona, nella quale la comunicazione e la comprensione delle informazioni siano parte integrante del percorso di cura.</p>
-</div>
+  <div class="container">
+    <div class="eyebrow">01 · Chi sono</div>
+    <h2>Piacere, sono Roberta Autuori.</h2>
+
+    <div class="split">
+      <div class="bio-text">
+        <p>Sono un medico specialista in Genetica Medica e lavoro presso l'AOU Ruggi di Salerno.</p>
+
+        <p>Mi sono laureata al Campus Biomedico di Roma e specializzata in Genetica Medica presso il Policlinico Tor Vergata di Roma.</p>
+
+        <p>Mi occupo di genetica clinica e di interpretazione dei referti genetici, con l'obiettivo di integrare i risultati dei test con la storia personale e familiare di ciascuna persona.</p>
+
+        <p>Credo in una medicina attenta alla persona, nella quale la comunicazione e la comprensione delle informazioni siano parte integrante del percorso di cura.</p>
+      </div>
+
+      <div class="bio-photo">
+        <img src="foto-roberta.jpg" alt="Roberta Autuori">
+      </div>
+    </div>
+  </div>
 </section>
+
+<style>
+.split {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+
+.bio-text {
+  flex: 1;
+}
+
+.bio-photo {
+  flex: 0 0 200px;
+  text-align: center;
+}
+
+.bio-photo img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 20px;
+}
+
+@media (max-width: 600px) {
+  .split {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .bio-photo {
+    flex: none;
+  }
+
+  .bio-photo img {
+    max-width: 150px;
+  }
+}
+</style>
 
 <section id="visita" class="pink">
 <div class="container">
